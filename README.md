@@ -1,1 +1,1 @@
-This repository contains all the codes,assignments ,projects done by me during Namaste React Bootcamp.
+This Repository Contains all the codes, assignments, and projects done by me during Namaste React Bootcamp.
