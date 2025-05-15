@@ -8,6 +8,17 @@ Parcel is a zero-config web application bundler that takes your code (HTML, JS, 
 
 - Automatically handles bundling, transpiling, minifying.
 
+
+
+      Your Code + Dependencies (node_modules)
+            ↓
+         Parcel (bundler)
+            ↓
+       Bundled, transpiled, minified files (dist/)
+            ↓
+         Browser loads & runs your app
+ 
+
 # Features :
 
 - Dev Build
