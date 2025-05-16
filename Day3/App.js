@@ -1,33 +1,111 @@
-
-
-
-
-
-
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom/client"
 
-const parent = React.createElement("div",{id:"parent"},
-    React.createElement("div",{id:"child1"},
-       React.createElement("h1",{},"I am inside h1 Namste Rakesh Javascript")));
+// React.createElement ==> JS Object ==> HTML Element(render)
+
+
+// This is how you create React element using React(core React).
+const heading = React.createElement('h1',{id:"heading"},"Namaste React!");
+
+console.log(heading);  // Object
+
+
+//JSX
+
+// This is how you create React element using JSX.
+//  JSX (transpiled before it reaches the JS) - by Parcel - Babel.
+
+
+
+
+
+
+// JSX ==> Babel transpiles it to -- React.createElement => ReactElement => JS Object => HTML Element(render) 
+
+const elem = <span>This is React-element</span>
+
+// React Element
+
+ const jsxHeading =  (
     
-       
+    <h1 className="head" tabIndex="5">
+  
+      {/* To put any React-element inside React-element */}
+      
+      {elem}
+      Namaste React using JSX
+    </h1>
+   )
+
+ //console.log(jsxHeading);  // Object
+
+//  jsxHeading is a react Element , jsx is just a way/syntax to write this
 
 
-        //JSX
-     
+// React Component
+// Class Based Component - OLD
+// Functional Component  - NEW
 
-// const heading = React.createElement("h1",{id:"heading",xyz:"abc"},"Hello World from React! ");  // Object --React Element
+
+// React Functional Components
 
 
+const Title = () => (
+    <h1 className="head" tabIndex="5">Namaste React using JSX
+    </h1>
+   );
+  
+
+// const HeadingComponent1 = () => {
+//     return <h1 className="heading">Namaste React Functional Component</h1>;
+// };
+
+
+// HeadingComponent1 is same as HeadingComponent2
+
+const data = 1000;
+
+// Component Composition.
+const HeadingComponent2 = () => (
+<div id="container">
+
+
+    {/* To put any JS code inside JSX */}
+    {jsxHeading}
+     <h2>{100 + 200}</h2>
+     <h2>{console.log("Hii")}</h2>
+
+
+    {/* to render Title component inside HeadingComponent2 */}
+    {/* <Title>  </Title>  and <Title/>  are same things to render */}
+    {/* ultimately component is a js function which is js code that's why {Title()} */}
     
-//console.log(parent);     //Object
- const root = ReactDOM.createRoot(document.getElementById("root"));
+    {Title()}  
+    <Title></Title>
+    <Title/>    
+
+<h1 className="heading">Namaste React Functional Component</h1>
+</div>
+);
 
 
- // The render method  is converting the Object (React Element) to an HTML Element and putting inside root.
-root.render(parent);  
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
+  
+
+
+// This is how we render React Functional components.
+root.render(<HeadingComponent2/>);
+
+
+// root.render(heading);
+// root.render(jsxHeading);
 
 
 
-// React can work independtly small portion of an app like for specifc element . it is not a full -fledged framework, It's a Library.
+
+
+
+
+
