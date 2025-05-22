@@ -1,17 +1,17 @@
 const RestaurantCard = (props) =>{
-    console.log(props);
+    // console.log(props);
    
     const {resData} = props;
-
     // Destructuring in JS
 
     const{
+      cloudinaryImageId,
       name,
       cuisines,
       costForTwo,
       deliveryTime,
       Rating
-    } = resData?.data;
+    } = resData?.info;
 
 
      
@@ -21,9 +21,9 @@ const RestaurantCard = (props) =>{
         <img 
         className="restaurant-logo"
         alt="restaurant-logo"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/hxxasn2kf8g9eyi9eonq"/>
+         src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}/>
         <h3>{name}</h3>
-        <h4>{cuisines}</h4>
+        <h4>{cuisines.join(',')}</h4>
         <h4>{costForTwo}</h4>
         <h4>{deliveryTime}</h4>
         <h4>{Rating}</h4>

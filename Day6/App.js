@@ -13,7 +13,7 @@ import Body from "./components/Body";
 
  
   const AppLayout = () => {
-    console.log(<Body/>);
+    // console.log(<Body/>);
     return (
         <div className="app">
          <Header/>
@@ -31,6 +31,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // This is how we render React Functional components.
 root.render(<AppLayout/>);
+
+
+
+
+
+
 
 
 

@@ -4,6 +4,9 @@ import { useState } from "react";
 const Body = () =>{
   
  // Local State Variable  - Super powerful variable
+
+ 
+  
  const [listOfRestaurants,setListOfRestaurants] = useState([
   {
   data:{
@@ -35,7 +38,7 @@ const Body = () =>{
       Rating: "4.5",
 
     }
-  }]);
+  }])
 
 // Normal JS variable
 
@@ -48,8 +51,8 @@ const Body = () =>{
        <div className="filter">
         <button className="filter-btn" onClick={() => {
           // Filter - logic here
-          const filteredList = listOfRestaurants.filter((res) => res.data.Rating > 4);
-          setListOfRestaurants(filteredList);
+          let filteredList= listOfRestaurants.filter((res) => res.data.Rating > 4);
+           setListOfRestaurants(filteredList);
           console.log(listOfRestaurants);
         }}
         >
