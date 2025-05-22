@@ -1,5 +1,5 @@
 const RestaurantCard = (props) =>{
-    // console.log(props);
+     console.log(props);
    
     const {resData} = props;
     // Destructuring in JS
@@ -9,9 +9,11 @@ const RestaurantCard = (props) =>{
       name,
       cuisines,
       costForTwo,
-      deliveryTime,
-      Rating
+      sla,
+      avgRating,
     } = resData?.info;
+
+   
 
 
      
@@ -25,8 +27,8 @@ const RestaurantCard = (props) =>{
         <h3>{name}</h3>
         <h4>{cuisines.join(',')}</h4>
         <h4>{costForTwo}</h4>
-        <h4>{deliveryTime}</h4>
-        <h4>{Rating}</h4>
+        <h4>{sla.deliveryTime}</h4>
+        <h4>{avgRating}</h4>
         
   
       </div>

@@ -80,6 +80,7 @@ margin: 10px;
 }
 
 .restaurant-card h4{
+    margin: 0px;
     max-width: 100%;
     word-break: break-word;
 }

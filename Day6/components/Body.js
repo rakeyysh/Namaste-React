@@ -8,6 +8,7 @@ const Body = () =>{
  const [listOfRestaurants,setListOfRestaurants] = useState([]);
 const [filteredRestaurant,setFilteredRestaurant] = useState([]);
 
+
  const [searchText,setSearchText] = useState("");
 
 
@@ -26,6 +27,7 @@ const [filteredRestaurant,setFilteredRestaurant] = useState([]);
   //  console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
    setListOfRestaurants(json?.data.cards[4]?.card?.card?.gridElements.infoWithStyle?.restaurants);
    setFilteredRestaurant(json?.data.cards[4]?.card?.card?.gridElements.infoWithStyle?.restaurants);
+
    
   
 
@@ -69,8 +71,9 @@ const [filteredRestaurant,setFilteredRestaurant] = useState([]);
         </div>
         <button className="filter-btn" onClick={() => {
           // Filter - logic here
-          const filteredList = listOfRestaurants.filter((res) => res.data.Rating > 4);
-          setListOfRestaurants(filteredList);
+          const filteredList = listOfRestaurants.filter((res) => res.info.avgRating > 4.5);
+          console.log(filteredList);
+           setFilteredRestaurant(filteredList);
           // console.log(listOfRestaurants);
         }}
         >
