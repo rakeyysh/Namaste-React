@@ -94,3 +94,6 @@ margin: 10px;
 .search{
     margin: 10px;
 }
+.restaurant-card img{
+    max-height: 60%;
+}
