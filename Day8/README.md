@@ -53,3 +53,6 @@ In class-based components, React follows a two-phase lifecycle: Render Phase (wh
     - This method is called immediately after a component updates due to changes in props or state. It's useful for:
       - Reacting to prop or state changes (e.g., fetching new data when a prop changes)
        - Performing side effects after updates .       
+
+       # References:
+        https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
