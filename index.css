@@ -97,3 +97,8 @@ margin: 10px;
 .restaurant-card img{
     max-height: 60%;
 }
+
+.user-card{
+    padding: 10px;
+    border: 1px solid grey;
+}
