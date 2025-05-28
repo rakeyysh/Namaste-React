@@ -22,25 +22,23 @@
 In class-based components, React follows a two-phase lifecycle: Render Phase (where it builds the virtual DOM by calling constructor() and render() from parent to child) and Commit Phase (where it applies changes to the real DOM and calls componentDidMount() from child to parent). React batches DOM updates to improve performance since actual DOM manipulation is expensive. This efficient rendering and commit strategy makes React very fast and optimized.
 
 
-/**
- *  - Parent Constructor
- *  - Parent Render
- *   
- *    - First Constructor
- *    - First Render
- * 
- *  
- *     - Second Constructor
- *      - Second Render
- * 
- *     < DOM UPDATED - IN SINGLE BATCH >
- *        - First componentDidMount();
- *        - Second componentDidMount();
- * 
- * 
- *  - Parent componentDidMount();
- *  
- */
+
+   - Parent Constructor
+    - Parent Render
+     
+      - First Constructor
+     - First Render
+  
+      - Second Constructor
+       - Second Render
+  
+      < DOM UPDATED - IN SINGLE BATCH >
+       - First componentDidMount();
+       - Second componentDidMount();
+  
+   - Parent componentDidMount();
+   
+ 
 
  # 🔹 componentWillUnmount()
    - This method is called right before a component is unmounted and destroyed. It’s typically used for cleanup tasks such as:
@@ -54,5 +52,6 @@ In class-based components, React follows a two-phase lifecycle: Render Phase (wh
       - Reacting to prop or state changes (e.g., fetching new data when a prop changes)
        - Performing side effects after updates .       
 
-       # References:
-        https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+ #   # References:
+        https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/    
