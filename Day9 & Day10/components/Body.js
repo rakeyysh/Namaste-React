@@ -59,18 +59,18 @@ const [filteredRestaurant,setFilteredRestaurant] = useState([]);
 
     return (
      <div className="body">
-       <div className="filter">
-        <div className="search">
-          <input type="text" className="search-box" value={searchText}
+       <div className="filter flex">
+        <div className="search m-4 p-4">
+          <input type="text" className="border border-solid border-black" value={searchText}
             onChange={(e)=>{
               setSearchText(e.target.value);
             }}
           />
-          <button onClick={() =>{
+
+          
+          <button className="px-4 py-1 bg-red-400 m-4 rounded-lg hover:bg-red-500" onClick={() =>{
              // Filter the restaurant cards and update the UI
              // searchText
-           
-
              
             const filteredRestaurant =listOfRestaurants.filter(
               (restaurant) => restaurant.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -78,10 +78,14 @@ const [filteredRestaurant,setFilteredRestaurant] = useState([]);
              setFilteredRestaurant(filteredRestaurant);
           }
           }>search</button>
-
+          
           
         </div>
-        <button className="filter-btn" onClick={() => {
+
+
+        <div className="search m-4 p-4 flex items-center">
+
+        <button className="px-4 py-1 bg-gray-200 rounded-lg hover:bg-gray-300" onClick={() => {
           // Filter - logic here
           const filteredList = listOfRestaurants.filter((res) => res.info.avgRating > 4.5);
           console.log(filteredList);
@@ -90,8 +94,10 @@ const [filteredRestaurant,setFilteredRestaurant] = useState([]);
         }}
         >
           Top Rated Restaurant</button>
+          </div>
+
        </div>
-       <div className="restaurant-container">
+       <div className="restaurant-container flex flex-wrap">
         {
         filteredRestaurant.map((restaurant) =>(
           
