@@ -28,4 +28,4 @@ return (
 
 - # ✅ Bottom Line
 🟩 Only the state used inside JSX affects what's rendered.
-🟥 Updating other state variables won’t affect the UI unless they’re involved in rendering.
+🟥 Updating other state variables won’t affect the UI unless they’re involved in rendering. 
