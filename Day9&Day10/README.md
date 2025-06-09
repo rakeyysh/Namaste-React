@@ -22,7 +22,7 @@
 
 
    # 🔸 3. Why Use <Suspense>?
-    Since React.lazy() loads components asynchronously, React needs to know what to show while it's loading. That’s where <Suspense> comes in.
+    Since React.lazy() loads components asynchronously, React needs to know what to show while it's loading. That’s where <Suspense> comes in. 
 
 
  
