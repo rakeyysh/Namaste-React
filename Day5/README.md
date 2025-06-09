@@ -63,4 +63,4 @@ Only the actual DOM nodes that are affected are touched.
 No wholesale re-rendering of DOM nodes.
 
 - # ✅ Summary Phrase You Can Use
-"React always builds a new Virtual DOM (Fiber tree) on every render. It never mutates the old one. It then compares the new one to the previous, marks the differences, and finally applies the minimal required updates to the actual DOM. This is the essence of React's efficient UI rendering."
+"React always builds a new Virtual DOM (Fiber tree) on every render. It never mutates the old one. It then compares the new one to the previous, marks the differences, and finally applies the minimal required updates to the actual DOM. This is the essence of React's efficient UI rendering." 
