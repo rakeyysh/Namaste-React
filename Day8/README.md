@@ -54,4 +54,4 @@ In class-based components, React follows a two-phase lifecycle: Render Phase (wh
 
 
  #   # References:
-        https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/    
+        https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/     
